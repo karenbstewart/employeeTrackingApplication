@@ -9,12 +9,20 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+    @Column(name="id")
     private Long id;
     // id isn't passed in, it will be assigned by the database
+
+    @Column(name="name")
     private String name;
+
+    @Column(name="age")
     private int age;
+
+    @Column(name="employeeNumber")
     private int employeeNumber;
+
+    @Column(name="email")
     private String email;
 
     public Employee(String name, int age, int employeeNumber, String email){
