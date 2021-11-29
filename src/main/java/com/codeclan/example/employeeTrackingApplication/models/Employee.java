@@ -1,8 +1,17 @@
 package com.codeclan.example.employeeTrackingApplication.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="employees")
+
 public class Employee {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private Long id;
+    // id isn't passed in, it will be assigned by the database
     private String name;
     private int age;
     private int employeeNumber;
